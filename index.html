@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aeri Choi — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -26,34 +26,19 @@
     body { font-family: 'DM Sans', -apple-system, sans-serif; color: var(--text); background: var(--cream); display: flex; -webkit-font-smoothing: antialiased; }
 
     /* ── SIDEBAR ── */
-    .sidebar {
-      width: var(--sidebar-w); min-height: 100vh;
-      background: var(--navy); position: fixed; top: 0; left: 0;
-      display: flex; flex-direction: column; padding: 48px 32px; z-index: 200;
-      transition: transform 0.3s ease;
-    }
+    .sidebar { width: var(--sidebar-w); min-height: 100vh; background: var(--navy); position: fixed; top: 0; left: 0; display: flex; flex-direction: column; padding: 48px 32px; z-index: 200; }
     .sidebar-top { flex: 1; }
-    .sidebar-monogram {
-      width: 44px; height: 44px; border: 1.5px solid rgba(196,164,107,0.5);
-      border-radius: 8px; display: flex; align-items: center; justify-content: center;
-      font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 500;
-      letter-spacing: 1px; color: var(--gold); margin-bottom: 40px;
-    }
+    .sidebar-monogram { width: 44px; height: 44px; border: 1.5px solid rgba(196,164,107,0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 500; letter-spacing: 1px; color: var(--gold); margin-bottom: 40px; }
     .sidebar-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--white); line-height: 1.2; margin-bottom: 6px; }
-    .sidebar-role { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 52px; }
+    .sidebar-role { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 44px; }
     .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
-    .nav-link {
-      display: flex; align-items: center; gap: 12px; padding: 10px 14px;
-      border-radius: 8px; color: rgba(255,255,255,0.45); font-size: 13px; font-weight: 500;
-      text-decoration: none; cursor: pointer; border: none; background: none;
-      width: 100%; text-align: left; transition: all 0.2s;
-    }
+    .nav-link { display: flex; align-items: center; gap: 12px; padding: 9px 14px; border-radius: 8px; color: rgba(255,255,255,0.45); font-size: 13px; font-weight: 500; text-decoration: none; cursor: pointer; border: none; background: none; width: 100%; text-align: left; transition: all 0.2s; }
     .nav-link:hover { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); }
     .nav-link.active { color: var(--white); background: rgba(255,255,255,0.1); }
-    .nav-link .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0; flex-shrink: 0; transition: opacity 0.2s; }
+    .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0; flex-shrink: 0; transition: opacity 0.2s; }
     .nav-link.active .nav-dot { opacity: 1; }
-    .sidebar-bottom { padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
-    .social-links { display: flex; flex-direction: column; gap: 10px; }
+    .sidebar-bottom { padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .social-links { display: flex; flex-direction: column; gap: 9px; }
     .social-link { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.4); font-size: 12px; text-decoration: none; transition: color 0.2s; }
     .social-link:hover { color: var(--gold-light); }
     .social-link svg { width: 14px; height: 14px; flex-shrink: 0; }
@@ -62,29 +47,35 @@
     .main { margin-left: var(--sidebar-w); flex: 1; }
 
     /* ── SECTIONS ── */
-    section { min-height: 100vh; }
     .section-inner { max-width: 880px; padding: 100px 72px; }
     .section-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 600; color: var(--navy); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 52px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 600; color: var(--navy); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 48px; }
 
     /* ── HERO ── */
     #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
-    .hero-left { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; background: var(--cream); }
-    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
-    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 80px); font-weight: 600; line-height: 0.95; color: var(--navy); letter-spacing: -1px; margin-bottom: 28px; }
-    .hero-desc { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-mid); max-width: 340px; margin-bottom: 40px; }
-    .hero-meta { display: flex; flex-direction: column; gap: 8px; margin-bottom: 48px; }
+    .hero-left { padding: 72px 56px; display: flex; flex-direction: column; justify-content: center; background: var(--cream); }
+    .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; }
+    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(56px, 7vw, 96px); font-weight: 600; line-height: 1.0; color: var(--navy); letter-spacing: -2px; white-space: nowrap; margin-bottom: 24px; }
+    .hero-desc { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-mid); max-width: 360px; margin-bottom: 32px; }
+    .hero-meta { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
     .hero-meta-item { font-size: 12.5px; color: var(--text-light); display: flex; gap: 10px; align-items: center; }
     .hero-meta-item::before { content: ''; display: block; width: 20px; height: 1px; background: var(--gold); }
-    .scroll-cta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--text-light); }
-    .scroll-cta .line { width: 32px; height: 1px; background: var(--text-light); }
+
+    .hero-downloads { display: flex; gap: 12px; flex-wrap: wrap; }
+    .dl-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 9px; font-size: 13px; font-weight: 500; text-decoration: none; transition: all 0.2s; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; }
+    .dl-btn-primary { background: var(--navy); color: var(--white); }
+    .dl-btn-primary:hover { background: var(--navy-light); }
+    .dl-btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--border); }
+    .dl-btn-outline:hover { border-color: var(--gold); color: var(--text-mid); }
+    .dl-btn .coming-tag { font-size: 10px; font-weight: 600; background: var(--gold); color: var(--white); padding: 2px 6px; border-radius: 4px; margin-left: 2px; letter-spacing: 0.3px; }
+
     .hero-right { background: var(--navy); position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
     .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.92; }
-    .hero-photo-label { position: absolute; bottom: 32px; left: 32px; font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: rgba(255,255,255,0.4); }
+    .hero-photo-label { position: absolute; bottom: 28px; left: 28px; font-family: 'Cormorant Garamond', serif; font-size: 13px; font-style: italic; color: rgba(255,255,255,0.35); }
 
     /* ── ABOUT ── */
-    #about { min-height: auto; background: var(--white); }
-    .about-bio { max-width: 600px; margin-bottom: 52px; }
+    #about { background: var(--white); }
+    .about-bio { max-width: 600px; margin-bottom: 48px; }
     .about-bio p { font-size: 15.5px; line-height: 1.85; color: var(--text-mid); font-weight: 300; margin-bottom: 18px; }
     .about-bio p strong { color: var(--navy); font-weight: 500; }
     .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -101,142 +92,145 @@
     .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
     .skill-tag { padding: 4px 11px; border-radius: 20px; background: var(--white); border: 1px solid var(--border); font-size: 12px; color: var(--text-mid); }
 
-    /* ── EXPERIENCE ── */
-    #experience { min-height: auto; background: var(--cream); }
-    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .exp-card {
-      background: var(--white); border-radius: 16px; padding: 32px;
-      border: 1px solid var(--border); cursor: pointer; transition: all 0.25s;
-      display: flex; flex-direction: column; justify-content: space-between;
+    /* ── JOB (Objective) ── */
+    #job { background: var(--cream); }
+    .job-placeholder {
+      background: var(--white); border-radius: 20px;
+      border: 1.5px dashed var(--border); padding: 48px;
+      max-width: 680px;
     }
+    .job-placeholder-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); background: rgba(196,164,107,0.1); border: 1px solid rgba(196,164,107,0.3); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 20px; }
+    .job-placeholder-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--text-light); margin-bottom: 8px; }
+    .job-placeholder-company { font-size: 14px; color: var(--text-light); margin-bottom: 28px; }
+    .job-fields { display: flex; flex-direction: column; gap: 16px; }
+    .job-field { display: flex; gap: 12px; align-items: flex-start; }
+    .job-field-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); min-width: 80px; padding-top: 2px; }
+    .job-field-value { font-size: 13.5px; color: var(--text-light); line-height: 1.6; border-bottom: 1.5px dashed var(--border); flex: 1; padding-bottom: 8px; }
+    .job-field-value a { color: var(--blue, #2563eb); }
+    .job-add-note { margin-top: 28px; font-size: 12.5px; color: var(--text-light); font-style: italic; }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--white); }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .exp-card { background: var(--cream); border-radius: 16px; padding: 32px; border: 1px solid var(--border); cursor: pointer; transition: all 0.25s; display: flex; flex-direction: column; justify-content: space-between; }
     .exp-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(12,29,53,0.1); }
-    .exp-card-top { }
-    .exp-period { font-size: 11.5px; color: var(--gold); font-weight: 500; margin-bottom: 10px; letter-spacing: 0.3px; }
+    .exp-period { font-size: 11.5px; color: var(--gold); font-weight: 500; margin-bottom: 10px; }
     .exp-company { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-    .exp-role { font-size: 13px; color: var(--text-mid); margin-bottom: 16px; }
+    .exp-role { font-size: 13px; color: var(--text-mid); margin-bottom: 14px; }
     .exp-tagline { font-size: 13.5px; color: var(--text-light); line-height: 1.6; font-weight: 300; }
-    .exp-card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .exp-card-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); }
     .exp-arrow { font-size: 18px; color: var(--gold); transition: transform 0.2s; }
     .exp-card:hover .exp-arrow { transform: translateX(4px); }
     .exp-badge { font-size: 11px; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
 
-    /* ── EXPERIENCE MODAL (full-page overlay) ── */
-    .exp-modal {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: var(--cream); z-index: 500;
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow-y: auto;
-    }
+    /* ── EXPERIENCE MODAL ── */
+    .exp-modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 500; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); overflow-y: auto; }
     .exp-modal.open { transform: translateX(0); }
-    .modal-topbar {
-      background: var(--navy); padding: 0 52px;
-      display: flex; align-items: center; gap: 24px; height: 60px;
-      position: sticky; top: 0; z-index: 10;
-    }
-    .modal-back {
-      display: flex; align-items: center; gap: 8px;
-      background: none; border: none; color: rgba(255,255,255,0.65);
-      font-size: 13px; font-weight: 500; cursor: pointer; padding: 8px 0;
-      font-family: 'DM Sans', sans-serif; transition: color 0.2s;
-    }
+    .modal-topbar { background: var(--navy); padding: 0 52px; display: flex; align-items: center; gap: 24px; height: 60px; position: sticky; top: 0; z-index: 10; }
+    .modal-back { display: flex; align-items: center; gap: 8px; background: none; border: none; color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 500; cursor: pointer; padding: 8px 0; font-family: 'DM Sans', sans-serif; transition: color 0.2s; }
     .modal-back:hover { color: var(--white); }
-    .modal-back-arrow { font-size: 18px; }
     .modal-topbar-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.5); }
     .modal-hero { background: var(--navy); padding: 60px 52px; }
     .modal-period-badge { display: inline-block; background: rgba(196,164,107,0.2); color: var(--gold); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 18px; }
-    .modal-company { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 8px; }
-    .modal-role { font-size: 15px; color: rgba(255,255,255,0.55); font-weight: 300; }
+    .modal-company { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 8px; }
+    .modal-role-text { font-size: 15px; color: rgba(255,255,255,0.55); font-weight: 300; }
     .modal-body { max-width: 800px; padding: 60px 52px; }
-    .modal-section-title { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .modal-section-title { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
     .modal-desc { font-size: 15.5px; line-height: 1.85; color: var(--text-mid); font-weight: 300; margin-bottom: 40px; }
     .modal-achievements { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 52px; }
     .modal-achievements li { display: flex; gap: 16px; align-items: flex-start; }
-    .modal-achievements li .ach-icon { width: 32px; height: 32px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
-    .modal-achievements li .ach-text { font-size: 14.5px; color: var(--text); line-height: 1.65; }
-    .modal-achievements li .ach-text strong { color: var(--navy); font-weight: 600; }
+    .ach-icon { width: 32px; height: 32px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .ach-text { font-size: 14.5px; color: var(--text); line-height: 1.65; }
+    .ach-text strong { color: var(--navy); font-weight: 600; }
     .modal-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 52px; }
     .modal-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
     .modal-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .modal-photo-placeholder { width: 100%; height: 100%; background: var(--border); display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; border-radius: 12px; }
-    .modal-photo-placeholder p { font-size: 12px; color: var(--text-light); text-align: center; }
+    .modal-photo-placeholder { width: 100%; aspect-ratio: 4/3; background: var(--border); display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+    .modal-photo-placeholder p { font-size: 12px; color: var(--text-light); text-align: center; line-height: 1.6; }
 
     /* ── PROJECTS ── */
-    #projects { min-height: auto; background: var(--white); }
-    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .project-card { background: var(--cream); border-radius: 14px; padding: 28px; border: 1px solid var(--border); transition: all 0.2s; }
+    #projects { background: var(--cream); }
+    #projects .section-inner { max-width: 1160px; }
+    .projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .project-card { background: var(--white); border-radius: 14px; padding: 24px; border: 1px solid var(--border); transition: all 0.2s; }
     .project-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-    .project-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); margin-bottom: 14px; }
-    .project-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 6px; }
-    .project-org { font-size: 11.5px; color: var(--text-light); margin-bottom: 12px; }
-    .project-desc { font-size: 13px; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
-    .project-stat { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--navy); font-weight: 500; }
+    .project-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); margin-bottom: 12px; }
+    .project-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 6px; }
+    .project-org { font-size: 11px; color: var(--text-light); margin-bottom: 10px; }
+    .project-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
+    .project-stat { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12px; color: var(--navy); font-weight: 500; }
+    .project-card-placeholder { border-style: dashed; background: transparent; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 160px; }
 
     /* ── GALLERY ── */
-    #gallery { min-height: auto; background: var(--cream); }
-    .gallery-grid { columns: 3; gap: 12px; }
-    .gallery-grid .gallery-item { break-inside: avoid; margin-bottom: 12px; border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; }
-    .gallery-grid .gallery-item img { width: 100%; display: block; transition: transform 0.3s; }
-    .gallery-grid .gallery-item:hover img { transform: scale(1.03); }
-    .gallery-lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(12,29,53,0.95); z-index: 800; display: none; align-items: center; justify-content: center; }
-    .gallery-lightbox.open { display: flex; }
-    .lightbox-img { max-width: 85vw; max-height: 85vh; border-radius: 10px; object-fit: contain; }
-    .lightbox-close { position: absolute; top: 24px; right: 32px; background: none; border: none; color: white; font-size: 32px; cursor: pointer; opacity: 0.7; }
-    .lightbox-close:hover { opacity: 1; }
+    #gallery { background: var(--white); }
+    #gallery .section-inner { max-width: 1160px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .gallery-item { border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; aspect-ratio: 4/3; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,29,53,0.75) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-item-label { font-size: 13px; font-weight: 500; color: white; }
+
+    /* Gallery detail panel */
+    .gallery-panel { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(12,29,53,0.92); z-index: 700; display: none; align-items: center; justify-content: center; padding: 40px; }
+    .gallery-panel.open { display: flex; }
+    .gallery-panel-inner { display: grid; grid-template-columns: 1fr 400px; max-width: 1100px; width: 100%; background: var(--white); border-radius: 20px; overflow: hidden; max-height: 85vh; }
+    .gallery-panel-img-side { overflow: hidden; }
+    .gallery-panel-img-side img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-panel-info { background: var(--navy); padding: 48px 40px; display: flex; flex-direction: column; overflow-y: auto; }
+    .gallery-panel-close { align-self: flex-end; background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; transition: all 0.2s; }
+    .gallery-panel-close:hover { background: rgba(255,255,255,0.2); color: white; }
+    .gallery-panel-tag { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .gallery-panel-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
+    .gallery-panel-date { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; }
+    .gallery-panel-desc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; font-weight: 300; flex: 1; }
+    .gallery-panel-link { margin-top: 28px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--gold); cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: gap 0.2s; }
+    .gallery-panel-link:hover { gap: 12px; }
 
     /* ── ELEVATOR PITCH ── */
-    #pitch { min-height: auto; background: var(--navy); }
-    #pitch .section-inner { padding-bottom: 80px; }
+    #pitch { background: var(--navy); }
     #pitch .section-eyebrow { color: rgba(196,164,107,0.8); }
-    #pitch .section-title { color: var(--white); margin-bottom: 12px; }
-    .pitch-sub { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 40px; font-weight: 300; }
+    #pitch .section-title { color: var(--white); margin-bottom: 10px; }
+    .pitch-sub { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 40px; font-weight: 300; }
     .video-container { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
     .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     /* ── FOOTER ── */
-    footer { background: #080F1A; color: white; padding: 48px 72px; margin-left: 0; }
-    .footer-inner { max-width: 880px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    footer { background: #080F1A; color: white; padding: 44px 72px; }
+    .footer-inner { max-width: 880px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; }
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { font-size: 12.5px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold-light); }
-    .footer-copy { width: 100%; font-size: 12px; color: rgba(255,255,255,0.2); padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 4px; }
+    .footer-copy { width: 100%; font-size: 12px; color: rgba(255,255,255,0.2); padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.06); }
 
-    /* ── MOBILE NAV ── */
+    /* ── MOBILE ── */
     .mobile-topbar { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 300; background: var(--navy); padding: 0 20px; height: 56px; align-items: center; justify-content: space-between; }
     .mobile-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--white); font-weight: 600; }
     .mobile-menu-btn { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 22px; cursor: pointer; }
     .mobile-drawer { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--navy-mid); z-index: 299; padding: 12px; }
     .mobile-drawer.open { display: block; }
-    .mobile-drawer button { display: block; width: 100%; padding: 12px 16px; background: none; border: none; color: rgba(255,255,255,0.65); font-size: 14px; font-family: 'DM Sans', sans-serif; text-align: left; cursor: pointer; border-radius: 6px; }
+    .mobile-drawer button { display: block; width: 100%; padding: 11px 16px; background: none; border: none; color: rgba(255,255,255,0.65); font-size: 14px; font-family: 'DM Sans', sans-serif; text-align: left; cursor: pointer; border-radius: 6px; }
     .mobile-drawer button.active { color: white; background: rgba(255,255,255,0.1); }
 
+    @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 900px) {
-      .sidebar { display: none; }
-      .main { margin-left: 0; }
-      .mobile-topbar { display: flex; }
-      #hero { grid-template-columns: 1fr; padding-top: 56px; }
-      .hero-right { min-height: 55vw; order: -1; }
-      .hero-left { padding: 40px 24px; }
-      .section-inner { padding: 72px 24px; }
-      .exp-grid { grid-template-columns: 1fr; }
-      .about-cards { grid-template-columns: 1fr; }
-      .projects-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-grid { columns: 2; }
-      .modal-topbar, .modal-hero, .modal-body { padding-left: 24px; padding-right: 24px; }
-      footer { padding: 40px 24px; }
+      .sidebar { display: none; } .main { margin-left: 0; } .mobile-topbar { display: flex; }
+      #hero { grid-template-columns: 1fr; padding-top: 56px; } .hero-right { min-height: 55vw; order: -1; } .hero-left { padding: 40px 24px; } .hero-name { white-space: normal; font-size: clamp(44px, 10vw, 72px); }
+      .section-inner { padding: 64px 24px; } .about-cards { grid-template-columns: 1fr; }
+      .exp-grid { grid-template-columns: 1fr; } .projects-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; } .gallery-panel-inner { grid-template-columns: 1fr; max-height: 90vh; }
+      .gallery-panel-img-side { max-height: 40vh; } .modal-topbar, .modal-hero, .modal-body { padding-left: 24px; padding-right: 24px; }
+      footer { padding: 36px 24px; }
     }
-    @media (max-width: 600px) {
-      .projects-grid { grid-template-columns: 1fr; }
-      .gallery-grid { columns: 1; }
-      .modal-photos { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } .modal-photos { grid-template-columns: 1fr; } .hero-downloads { flex-direction: column; } }
   </style>
 </head>
 <body>
 
 <!-- ── SIDEBAR ── -->
-<aside class="sidebar" id="sidebar">
+<aside class="sidebar">
   <div class="sidebar-top">
     <div class="sidebar-monogram">AC</div>
     <div class="sidebar-name">Aeri Choi</div>
@@ -244,6 +238,7 @@
     <nav class="sidebar-nav">
       <button class="nav-link active" data-target="hero"><span class="nav-dot"></span>Home</button>
       <button class="nav-link" data-target="about"><span class="nav-dot"></span>About</button>
+      <button class="nav-link" data-target="job"><span class="nav-dot"></span>Objective</button>
       <button class="nav-link" data-target="experience"><span class="nav-dot"></span>Experience</button>
       <button class="nav-link" data-target="projects"><span class="nav-dot"></span>Projects</button>
       <button class="nav-link" data-target="gallery"><span class="nav-dot"></span>Gallery</button>
@@ -276,6 +271,7 @@
 <div class="mobile-drawer" id="mobile-drawer">
   <button data-target="hero" onclick="mobileNav('hero')">Home</button>
   <button data-target="about" onclick="mobileNav('about')">About</button>
+  <button data-target="job" onclick="mobileNav('job')">Objective</button>
   <button data-target="experience" onclick="mobileNav('experience')">Experience</button>
   <button data-target="projects" onclick="mobileNav('projects')">Projects</button>
   <button data-target="gallery" onclick="mobileNav('gallery')">Gallery</button>
@@ -289,14 +285,23 @@
   <section id="hero">
     <div class="hero-left">
       <div class="hero-eyebrow">Portfolio · Class of 2027</div>
-      <h1 class="hero-name">Aeri<br>Choi.</h1>
-      <p class="hero-desc">I'm a junior studying Technology Systems Management at Stony Brook — building toward a career in Product Management through data, design, and getting things done.</p>
+      <h1 class="hero-name">Aeri Choi</h1>
+      <p class="hero-desc">Junior studying Technology Systems Management at Stony Brook — building toward a career in Product Management through data, design, and getting things done.</p>
       <div class="hero-meta">
         <div class="hero-meta-item">Stony Brook University · TSM</div>
         <div class="hero-meta-item">GPA 3.97 / 4.0</div>
         <div class="hero-meta-item">Bilingual · Korean & English</div>
       </div>
-      <div class="scroll-cta"><div class="line"></div> Scroll to explore</div>
+      <div class="hero-downloads">
+        <a href="resume.pdf" download="Aeri_Choi_Resume.pdf" class="dl-btn dl-btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
+          Resume
+        </a>
+        <a href="cover-letter.pdf" download="Aeri_Choi_Cover_Letter.pdf" class="dl-btn dl-btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Cover Letter <span class="coming-tag">Soon</span>
+        </a>
+      </div>
     </div>
     <div class="hero-right">
       <img src="profile.jpeg" alt="Aeri Choi" class="hero-photo">
@@ -311,7 +316,7 @@
       <h2 class="section-title">Connecting data,<br>people, and products.</h2>
       <div class="about-bio">
         <p>I'm drawn to Product Management because it sits at the intersection of <strong>empathy and evidence</strong> — understanding what people need, then building the case for why and how to build it. My background in Technology Systems Management gives me the analytical framework; my experience across startups, government programs, and marketing analytics gives me the context.</p>
-        <p>Growing up bilingual and working across Korean and US environments has shaped how I think about users: good products work across different mental models, not just different demographics. I bring that cross-cultural lens into everything I do.</p>
+        <p>Growing up bilingual and working across Korean and US environments has shaped how I think about users: good products work across different mental models, not just demographics. I bring that cross-cultural lens into everything I do.</p>
       </div>
       <div class="about-cards">
         <div class="about-card">
@@ -338,6 +343,38 @@
     </div>
   </section>
 
+  <!-- JOB / OBJECTIVE -->
+  <section id="job">
+    <div class="section-inner">
+      <div class="section-eyebrow">Objective</div>
+      <h2 class="section-title">Job I'm<br>Applying For.</h2>
+      <div class="job-placeholder">
+        <div class="job-placeholder-label">To be updated</div>
+        <div class="job-placeholder-title">[Position Title]</div>
+        <div class="job-placeholder-company">[Company Name] · [Location]</div>
+        <div class="job-fields">
+          <div class="job-field">
+            <div class="job-field-label">Type</div>
+            <div class="job-field-value">Entry-level / Internship</div>
+          </div>
+          <div class="job-field">
+            <div class="job-field-label">Posted</div>
+            <div class="job-field-value">[Date of posting — within past 3 years]</div>
+          </div>
+          <div class="job-field">
+            <div class="job-field-label">Link</div>
+            <div class="job-field-value"><a href="#">[Add job posting URL here]</a></div>
+          </div>
+          <div class="job-field">
+            <div class="job-field-label">JD</div>
+            <div class="job-field-value">[Paste or summarize job description here]</div>
+          </div>
+        </div>
+        <div class="job-add-note">✏️ Update the fields above with your target role when ready.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="section-inner">
@@ -345,7 +382,7 @@
       <h2 class="section-title">Where I've worked.</h2>
       <div class="exp-grid">
         <div class="exp-card" onclick="openModal('dhp')">
-          <div class="exp-card-top">
+          <div>
             <div class="exp-period">Mar 2026 – Present</div>
             <div class="exp-company">Digital Healthcare Partners</div>
             <div class="exp-role">Intern · Growth & Business Development</div>
@@ -357,7 +394,7 @@
           </div>
         </div>
         <div class="exp-card" onclick="openModal('dchoiglobal')">
-          <div class="exp-card-top">
+          <div>
             <div class="exp-period">Apr 2025 – Dec 2025</div>
             <div class="exp-company">dChoi Global</div>
             <div class="exp-role">Intern · Project Management & Marketing</div>
@@ -369,7 +406,7 @@
           </div>
         </div>
         <div class="exp-card" onclick="openModal('incheon')">
-          <div class="exp-card-top">
+          <div>
             <div class="exp-period">Apr 2025 – Present</div>
             <div class="exp-company">Incheon Metropolitan City</div>
             <div class="exp-role">Global Ambassador</div>
@@ -381,7 +418,7 @@
           </div>
         </div>
         <div class="exp-card" onclick="openModal('suny')">
-          <div class="exp-card-top">
+          <div>
             <div class="exp-period">Feb 2024 – Present</div>
             <div class="exp-company">SUNY Korea</div>
             <div class="exp-role">Undergraduate Teaching Assistant</div>
@@ -434,13 +471,25 @@
           <div class="project-num">05</div>
           <div class="project-name">IGC Startup Bootcamp</div>
           <div class="project-org">Incheon Global Campus · 2024–25</div>
-          <div class="project-desc">Led a startup team through business planning, competitor research, and an IR pitch to investors — managing end-to-end coordination.</div>
+          <div class="project-desc">Led a startup team through business planning, competitor research, and an IR pitch to investors — end-to-end coordination.</div>
           <div class="project-stat">💼 Team Lead · IR Pitch</div>
         </div>
-        <div class="project-card" style="border-style: dashed; background: transparent; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 200px;">
+        <div class="project-card project-card-placeholder">
           <div>
-            <div style="font-size: 24px; margin-bottom: 10px; color: var(--border);">+</div>
-            <div style="font-size: 13px; color: var(--text-light); font-weight: 300;">More coming soon</div>
+            <div style="font-size:22px; color:var(--border); margin-bottom:8px;">+</div>
+            <div style="font-size:12px; color:var(--text-light); font-weight:300;">More coming soon</div>
+          </div>
+        </div>
+        <div class="project-card project-card-placeholder">
+          <div>
+            <div style="font-size:22px; color:var(--border); margin-bottom:8px;">+</div>
+            <div style="font-size:12px; color:var(--text-light); font-weight:300;">More coming soon</div>
+          </div>
+        </div>
+        <div class="project-card project-card-placeholder">
+          <div>
+            <div style="font-size:22px; color:var(--border); margin-bottom:8px;">+</div>
+            <div style="font-size:12px; color:var(--text-light); font-weight:300;">More coming soon</div>
           </div>
         </div>
       </div>
@@ -453,17 +502,56 @@
       <div class="section-eyebrow">Gallery</div>
       <h2 class="section-title">Moments along<br>the way.</h2>
       <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox('gallery1.png')">
-          <img src="gallery1.png" alt="Startup competition">
+        <div class="gallery-item"
+          data-img="gallery1.png"
+          data-tag="Startup Competition · 2025"
+          data-title="Incheon Startup Competition"
+          data-date="Seoul · July – September 2025"
+          data-desc="Presented our HR service platform to media and industry professionals at the SURF 2025 Incheon event. I led the design process — 5 full UI iterations in Figma — and conducted direct outreach to 100 ICT companies. Our team earned the Idea Award."
+          data-exp="Incheon Startup Competition"
+          onclick="openGallery(this)">
+          <img src="gallery1.png" alt="Startup Competition">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Startup Competition · 2025</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('gallery2.png')">
-          <img src="gallery2.png" alt="Startup event">
+        <div class="gallery-item"
+          data-img="gallery2.png"
+          data-tag="Startup Competition · 2025"
+          data-title="Presenting to Judges"
+          data-date="Seoul · 2025"
+          data-desc="Engaging with potential partners and judges at the startup exhibition floor. I explained our HR platform concept and gathered real-time feedback from industry professionals — a key input for our final pitch."
+          data-exp="Incheon Startup Competition"
+          onclick="openGallery(this)">
+          <img src="gallery2.png" alt="Presenting">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Pitch Day · 2025</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('gallery3.png')">
-          <img src="gallery3.png" alt="SURF 2025 Incheon">
+        <div class="gallery-item"
+          data-img="gallery3.png"
+          data-tag="SURF 2025 · Incheon"
+          data-title="SURF 2025 Awards Ceremony"
+          data-date="Incheon · September 2025"
+          data-desc="The 2025 SURF (Start-Up, Realize Future) Incheon competition awards ceremony. Our team was recognized at this event, which brought together startups and innovators from across the Incheon Global Campus ecosystem."
+          data-exp="Incheon Startup Competition"
+          onclick="openGallery(this)">
+          <img src="gallery3.png" alt="SURF 2025">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">SURF 2025 Incheon</span></div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('profile.jpeg')">
+        <div class="gallery-item"
+          data-img="profile.jpeg"
+          data-tag="Professional · 2026"
+          data-title="Aeri Choi"
+          data-date="2026"
+          data-desc="Aspiring Product Manager, junior at Stony Brook University studying Technology Systems Management. Passionate about building products that work across cultures and contexts."
+          data-exp=""
+          onclick="openGallery(this)">
           <img src="profile.jpeg" alt="Aeri Choi">
+          <div class="gallery-item-overlay"><span class="gallery-item-label">Professional Photo</span></div>
+        </div>
+        <!-- Placeholder slots for more photos -->
+        <div class="gallery-item" style="background: var(--border); display:flex; align-items:center; justify-content:center; cursor:default;">
+          <span style="font-size:12px; color:var(--text-light); text-align:center; padding:16px;">📸 Add photos<br>to portfolio folder</span>
+        </div>
+        <div class="gallery-item" style="background: var(--border); display:flex; align-items:center; justify-content:center; cursor:default;">
+          <span style="font-size:12px; color:var(--text-light); text-align:center; padding:16px;">📸 Add photos<br>to portfolio folder</span>
         </div>
       </div>
     </div>
@@ -493,156 +581,125 @@
       <div class="footer-copy">© 2026 Aeri Choi. All rights reserved.</div>
     </div>
   </footer>
-
 </main>
 
 <!-- ── EXPERIENCE MODALS ── -->
-
-<!-- DHP -->
 <div class="exp-modal" id="modal-dhp">
-  <div class="modal-topbar">
-    <button class="modal-back" onclick="closeModal('dhp')"><span class="modal-back-arrow">←</span> Back to Experience</button>
-    <div class="modal-topbar-title">Digital Healthcare Partners</div>
-  </div>
-  <div class="modal-hero">
-    <div class="modal-period-badge">Mar 2026 – Present · Incheon, Korea</div>
-    <div class="modal-company">Digital Healthcare Partners</div>
-    <div class="modal-role">Intern · Growth & Business Development</div>
-  </div>
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('dhp')">← Back to Experience</button><div class="modal-topbar-title">Digital Healthcare Partners</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">Mar 2026 – Present · Incheon, Korea</div><div class="modal-company">Digital Healthcare Partners</div><div class="modal-role-text">Intern · Growth & Business Development</div></div>
   <div class="modal-body">
     <div class="modal-section-title">Overview</div>
     <p class="modal-desc">At Digital Healthcare Partners, I work on the Growth & Business Development team, supporting government-funded program operations. My role spans proposal strategy, document coordination, and workflow optimization — with a focus on making complex processes faster and more consistent through AI-assisted tools.</p>
     <div class="modal-section-title">Key Achievements</div>
     <ul class="modal-achievements">
       <li><div class="ach-icon">📋</div><div class="ach-text">Drafted and structured <strong>4 government funding applications</strong>, coordinating proposal content, deadlines, and submission materials end-to-end</div></li>
-      <li><div class="ach-icon">✅</div><div class="ach-text">Achieved a <strong>100% selection rate</strong> across all applications submitted — securing <strong>$160K+</strong> in combined government support</div></li>
-      <li><div class="ach-icon">⚡</div><div class="ach-text">Reduced proposal drafting turnaround time by <strong>50%</strong> by implementing AI-assisted workflows using Claude and Gemini for content structuring and document development</div></li>
-      <li><div class="ach-icon">📄</div><div class="ach-text">Prepared structured research summaries and program documentation for internal reporting and cross-team project planning</div></li>
+      <li><div class="ach-icon">✅</div><div class="ach-text">Achieved a <strong>100% selection rate</strong> across all applications — securing <strong>$160K+</strong> in combined government support</div></li>
+      <li><div class="ach-icon">⚡</div><div class="ach-text">Reduced proposal drafting turnaround time by <strong>50%</strong> by implementing AI-assisted workflows using Claude and Gemini</div></li>
+      <li><div class="ach-icon">📄</div><div class="ach-text">Prepared structured research summaries and program documentation for internal reporting and project planning</div></li>
     </ul>
     <div class="modal-section-title">Photos</div>
     <div class="modal-photos">
-      <div class="modal-photo"><img src="gallery2.png" alt="Event"></div>
-      <div class="modal-photo-placeholder"><p>📸 Add more<br>photos here</p></div>
+      <div class="modal-photo"><img src="gallery2.png" alt="DHP work"></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
     </div>
   </div>
 </div>
 
-<!-- dChoi Global -->
 <div class="exp-modal" id="modal-dchoiglobal">
-  <div class="modal-topbar">
-    <button class="modal-back" onclick="closeModal('dchoiglobal')"><span class="modal-back-arrow">←</span> Back to Experience</button>
-    <div class="modal-topbar-title">dChoi Global</div>
-  </div>
-  <div class="modal-hero">
-    <div class="modal-period-badge">Apr 2025 – Dec 2025 · Seoul, Korea</div>
-    <div class="modal-company">dChoi Global</div>
-    <div class="modal-role">Intern · Project Management & Marketing</div>
-  </div>
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('dchoiglobal')">← Back to Experience</button><div class="modal-topbar-title">dChoi Global</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">Apr 2025 – Dec 2025 · Seoul, Korea</div><div class="modal-company">dChoi Global</div><div class="modal-role-text">Intern · Project Management & Marketing</div></div>
   <div class="modal-body">
     <div class="modal-section-title">Overview</div>
     <p class="modal-desc">At dChoi Global, I worked at the intersection of data analytics and creative marketing. I tracked performance metrics across a network of influencers, translated those insights into content strategy, and created visual assets that communicated engagement data in accessible, compelling ways.</p>
     <div class="modal-section-title">Key Achievements</div>
     <ul class="modal-achievements">
-      <li><div class="ach-icon">📈</div><div class="ach-text">Analyzed social media engagement and campaign performance metrics using Google Analytics, contributing to <strong>61% year-over-year revenue growth</strong></div></li>
-      <li><div class="ach-icon">🎯</div><div class="ach-text">Tracked ambassador program performance and audience data across <strong>9 influencers</strong>, identifying insights that drove a <strong>185% increase in Instagram profile visits</strong> (month-over-month)</div></li>
-      <li><div class="ach-icon">🎨</div><div class="ach-text">Created data-driven visual content using Canva and Figma, translating engagement metrics into clear and accessible visual communication for marketing initiatives</div></li>
+      <li><div class="ach-icon">📈</div><div class="ach-text">Analyzed campaign performance using Google Analytics, contributing to <strong>61% YoY revenue growth</strong></div></li>
+      <li><div class="ach-icon">🎯</div><div class="ach-text">Tracked performance across <strong>9 influencers</strong>, identifying insights that drove a <strong>185% increase in Instagram profile visits</strong> (MoM)</div></li>
+      <li><div class="ach-icon">🎨</div><div class="ach-text">Created data-driven visual content using Canva and Figma, translating metrics into clear visual communication for marketing initiatives</div></li>
     </ul>
     <div class="modal-section-title">Photos</div>
     <div class="modal-photos">
-      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
-      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
     </div>
   </div>
 </div>
 
-<!-- Incheon City -->
 <div class="exp-modal" id="modal-incheon">
-  <div class="modal-topbar">
-    <button class="modal-back" onclick="closeModal('incheon')"><span class="modal-back-arrow">←</span> Back to Experience</button>
-    <div class="modal-topbar-title">Incheon Metropolitan City</div>
-  </div>
-  <div class="modal-hero">
-    <div class="modal-period-badge">Apr 2025 – Present · Incheon, Korea</div>
-    <div class="modal-company">Incheon Metropolitan City</div>
-    <div class="modal-role">Global Ambassador</div>
-  </div>
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('incheon')">← Back to Experience</button><div class="modal-topbar-title">Incheon Metropolitan City</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">Apr 2025 – Present · Incheon, Korea</div><div class="modal-company">Incheon Metropolitan City</div><div class="modal-role-text">Global Ambassador</div></div>
   <div class="modal-body">
     <div class="modal-section-title">Overview</div>
-    <p class="modal-desc">As a Global Ambassador for Incheon Metropolitan City, I represent the city's culture, policies, and tourism to international audiences — through social media, public events, and policy research. This role has pushed me to think at the systems level: how do cities attract and retain global talent, and how can those insights be turned into actionable policy?</p>
+    <p class="modal-desc">As a Global Ambassador for Incheon Metropolitan City, I represent the city's culture, policies, and tourism to international audiences — through social media, public events, and policy research. This role pushed me to think at a systems level: how do cities attract and retain global talent, and how can those insights become actionable policy?</p>
     <div class="modal-section-title">Key Achievements</div>
     <ul class="modal-achievements">
-      <li><div class="ach-icon">🏙️</div><div class="ach-text">Promoted Incheon's global appeal through social media and public events, reaching international audiences across platforms</div></li>
+      <li><div class="ach-icon">🏙️</div><div class="ach-text">Promoted Incheon's global appeal through social media and public events, reaching international audiences</div></li>
       <li><div class="ach-icon">📊</div><div class="ach-text">Conducted comparative research on <strong>city-level promotion strategies</strong>, delivering policy recommendations for foreign resident settlement and urban development</div></li>
       <li><div class="ach-icon">🏆</div><div class="ach-text">Proposal recognized as a <strong>best practice case</strong> by the city government — cited as a model for future outreach programs</div></li>
     </ul>
     <div class="modal-section-title">Photos</div>
     <div class="modal-photos">
       <div class="modal-photo"><img src="gallery3.png" alt="SURF 2025 Incheon"></div>
-      <div class="modal-photo-placeholder"><p>📸 Add more<br>photos here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
     </div>
   </div>
 </div>
 
-<!-- SUNY Korea -->
 <div class="exp-modal" id="modal-suny">
-  <div class="modal-topbar">
-    <button class="modal-back" onclick="closeModal('suny')"><span class="modal-back-arrow">←</span> Back to Experience</button>
-    <div class="modal-topbar-title">SUNY Korea</div>
-  </div>
-  <div class="modal-hero">
-    <div class="modal-period-badge">Feb 2024 – Present · SUNY Korea</div>
-    <div class="modal-company">SUNY Korea</div>
-    <div class="modal-role">Undergraduate Teaching Assistant</div>
-  </div>
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('suny')">← Back to Experience</button><div class="modal-topbar-title">SUNY Korea</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">Feb 2024 – Present · SUNY Korea</div><div class="modal-company">SUNY Korea</div><div class="modal-role-text">Undergraduate Teaching Assistant</div></div>
   <div class="modal-body">
     <div class="modal-section-title">Overview</div>
-    <p class="modal-desc">As a TA at SUNY Korea, I've supported two courses — EST 202 and EST 240 (Visual Rhetoric and Information Technology). In my current role as TA team lead for EST 240, I coordinate schedules, communicate daily with the professor, and ensure smooth course operations for a diverse student body.</p>
+    <p class="modal-desc">As a TA at SUNY Korea, I've supported two courses — EST 202 and EST 240 (Visual Rhetoric and Information Technology). In my current role as TA team lead for EST 240, I coordinate schedules, communicate daily with the professor, and ensure smooth operations for a diverse student body.</p>
     <div class="modal-section-title">Key Achievements</div>
     <ul class="modal-achievements">
       <li><div class="ach-icon">👥</div><div class="ach-text"><strong>Led a team of TAs</strong> to coordinate lecture schedules and course operations for EST 240, delivering daily summary updates to the professor</div></li>
-      <li><div class="ach-icon">📅</div><div class="ach-text">Organized and facilitated <strong>make-up sessions</strong> to ensure students didn't fall behind — managing logistics across multiple time slots</div></li>
-      <li><div class="ach-icon">🎓</div><div class="ach-text">Previously supervised <strong>45 students</strong> in EST 202 — handling attendance, Q&A, classroom setup, and final exam proctoring with consistent accuracy</div></li>
-      <li><div class="ach-icon">🖥️</div><div class="ach-text">Also served as <strong>Student Services Work-Study</strong> staff, handling U.S. visa inquiries, resolving 15+ weekly inquiries from students and faculty</div></li>
+      <li><div class="ach-icon">📅</div><div class="ach-text">Organized <strong>make-up sessions</strong> and managed logistics across multiple time slots</div></li>
+      <li><div class="ach-icon">🎓</div><div class="ach-text">Previously supervised <strong>45 students</strong> in EST 202 — handling attendance, Q&A, classroom setup, and final exam proctoring</div></li>
+      <li><div class="ach-icon">🖥️</div><div class="ach-text">Also served as <strong>Student Services Work-Study</strong>, handling U.S. visa inquiries and resolving 15+ weekly inquiries from students and faculty</div></li>
     </ul>
     <div class="modal-section-title">Photos</div>
     <div class="modal-photos">
-      <div class="modal-photo"><img src="gallery1.png" alt="Event"></div>
-      <div class="modal-photo-placeholder"><p>📸 Add more<br>photos here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
     </div>
   </div>
 </div>
 
-<!-- LIGHTBOX -->
-<div class="gallery-lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+<!-- ── GALLERY PANEL ── -->
+<div class="gallery-panel" id="gallery-panel" onclick="handleGalleryPanelClick(event)">
+  <div class="gallery-panel-inner">
+    <div class="gallery-panel-img-side">
+      <img id="gallery-panel-img" src="" alt="">
+    </div>
+    <div class="gallery-panel-info">
+      <button class="gallery-panel-close" onclick="closeGallery()">×</button>
+      <div class="gallery-panel-tag" id="gp-tag"></div>
+      <div class="gallery-panel-title" id="gp-title"></div>
+      <div class="gallery-panel-date" id="gp-date"></div>
+      <div class="gallery-panel-desc" id="gp-desc"></div>
+      <button class="gallery-panel-link" id="gp-link" onclick="goToExp()" style="display:none">View Full Experience →</button>
+    </div>
+  </div>
 </div>
 
 <script>
   /* ── SCROLL SPY ── */
-  const sections = ['hero','about','experience','projects','gallery','pitch'];
+  const sections = ['hero','about','job','experience','projects','gallery','pitch'];
   const navLinks = document.querySelectorAll('.nav-link[data-target]');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.id;
-        navLinks.forEach(l => {
-          l.classList.toggle('active', l.dataset.target === id);
-        });
-        document.querySelectorAll('.mobile-drawer button[data-target]').forEach(l => {
-          l.classList.toggle('active', l.dataset.target === id);
-        });
+        navLinks.forEach(l => l.classList.toggle('active', l.dataset.target === id));
+        document.querySelectorAll('.mobile-drawer button[data-target]').forEach(l => l.classList.toggle('active', l.dataset.target === id));
       }
     });
-  }, { threshold: 0.3, rootMargin: '-60px 0px -40% 0px' });
+  }, { threshold: 0.25, rootMargin: '-60px 0px -40% 0px' });
 
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
-  });
+  sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
 
-  /* ── NAV CLICK → SCROLL ── */
   navLinks.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.dataset.target);
@@ -651,39 +708,48 @@
   });
 
   /* ── MOBILE ── */
-  function toggleMobile() {
-    document.getElementById('mobile-drawer').classList.toggle('open');
-  }
-  function mobileNav(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    document.getElementById('mobile-drawer').classList.remove('open');
-  }
+  function toggleMobile() { document.getElementById('mobile-drawer').classList.toggle('open'); }
+  function mobileNav(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobile-drawer').classList.remove('open'); }
 
   /* ── EXPERIENCE MODALS ── */
-  function openModal(id) {
-    document.getElementById('modal-' + id).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(id) {
-    document.getElementById('modal-' + id).classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  function openModal(id) { document.getElementById('modal-' + id).classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal(id) { document.getElementById('modal-' + id).classList.remove('open'); document.body.style.overflow = ''; }
 
-  /* ── GALLERY LIGHTBOX ── */
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').classList.add('open');
+  /* ── GALLERY PANEL ── */
+  let currentGalleryExp = '';
+  const expMap = { 'Incheon Startup Competition': 'dhp' };
+
+  function openGallery(el) {
+    const img = el.dataset.img;
+    if (!img) return;
+    document.getElementById('gallery-panel-img').src = img;
+    document.getElementById('gp-tag').textContent = el.dataset.tag || '';
+    document.getElementById('gp-title').textContent = el.dataset.title || '';
+    document.getElementById('gp-date').textContent = el.dataset.date || '';
+    document.getElementById('gp-desc').textContent = el.dataset.desc || '';
+    currentGalleryExp = el.dataset.exp || '';
+    const linkBtn = document.getElementById('gp-link');
+    if (currentGalleryExp) { linkBtn.style.display = 'inline-flex'; }
+    else { linkBtn.style.display = 'none'; }
+    document.getElementById('gallery-panel').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-    document.getElementById('lightbox-img').src = '';
+  function closeGallery() {
+    document.getElementById('gallery-panel').classList.remove('open');
+    document.getElementById('gallery-panel-img').src = '';
     document.body.style.overflow = '';
+  }
+  function handleGalleryPanelClick(e) {
+    if (e.target === document.getElementById('gallery-panel')) closeGallery();
+  }
+  function goToExp() {
+    closeGallery();
+    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
   }
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      closeLightbox();
+      closeGallery();
       ['dhp','dchoiglobal','incheon','suny'].forEach(closeModal);
     }
   });
