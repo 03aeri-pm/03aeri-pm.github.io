@@ -249,11 +249,11 @@
     <nav class="sidebar-nav">
       <button class="nav-link active" data-target="hero"><span class="nav-dot"></span>Home</button>
       <button class="nav-link" data-target="about"><span class="nav-dot"></span>About</button>
+      <button class="nav-link" data-target="pitch"><span class="nav-dot"></span>Elevator Pitch</button>
       <button class="nav-link" data-target="job"><span class="nav-dot"></span>Objective</button>
       <button class="nav-link" data-target="experience"><span class="nav-dot"></span>Experience</button>
       <button class="nav-link" data-target="projects"><span class="nav-dot"></span>Projects</button>
       <button class="nav-link" data-target="gallery"><span class="nav-dot"></span>Gallery</button>
-      <button class="nav-link" data-target="pitch"><span class="nav-dot"></span>Elevator Pitch</button>
     </nav>
   </div>
   <div class="sidebar-bottom">
@@ -266,7 +266,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         03aeri@gmail.com
       </a>
-      <a href="resume.pdf" download class="social-link">
+      <a href="resume.pdf" download="Aeri Choi_resume.pdf" class="social-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15V3m0 12l-4-4m4 4l4-4M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
         Download Resume
       </a>
@@ -282,11 +282,11 @@
 <div class="mobile-drawer" id="mobile-drawer">
   <button data-target="hero" onclick="mobileNav('hero')">Home</button>
   <button data-target="about" onclick="mobileNav('about')">About</button>
+  <button data-target="pitch" onclick="mobileNav('pitch')">Elevator Pitch</button>
   <button data-target="job" onclick="mobileNav('job')">Objective</button>
   <button data-target="experience" onclick="mobileNav('experience')">Experience</button>
   <button data-target="projects" onclick="mobileNav('projects')">Projects</button>
   <button data-target="gallery" onclick="mobileNav('gallery')">Gallery</button>
-  <button data-target="pitch" onclick="mobileNav('pitch')">Elevator Pitch</button>
 </div>
 
 <!-- ── MAIN ── -->
@@ -304,13 +304,13 @@
         <div class="hero-meta-item">Bilingual · Korean & English</div>
       </div>
       <div class="hero-downloads">
-        <a href="resume.pdf" download="Aeri_Choi_Resume.pdf" class="dl-btn dl-btn-primary">
+        <a href="resume.pdf" download="Aeri Choi_resume.pdf" class="dl-btn dl-btn-primary">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/></svg>
           Resume
         </a>
-        <a href="cover-letter.pdf" download="Aeri_Choi_Cover_Letter.pdf" class="dl-btn dl-btn-outline">
+        <a href="cover-letter.pdf" download="Aeri Choi_cover letter.pdf" class="dl-btn dl-btn-outline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Cover Letter <span class="coming-tag">Soon</span>
+          Cover Letter
         </a>
       </div>
     </div>
@@ -350,6 +350,18 @@
             <div class="skill-row"><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="skill-tag">Korean</span><span class="skill-tag">English</span></div></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELEVATOR PITCH — moved here, after About -->
+  <section id="pitch">
+    <div class="section-inner">
+      <div class="section-eyebrow">Elevator Pitch</div>
+      <h2 class="section-title">90 seconds.<br>Here's who I am.</h2>
+      <p class="pitch-sub">A short video introduction — who I am, what I'm working toward, and why PM.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Ulj363FEOdU" title="Aeri Choi — Elevator Pitch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -626,18 +638,6 @@
     </div>
   </section>
 
-  <!-- ELEVATOR PITCH -->
-  <section id="pitch">
-    <div class="section-inner">
-      <div class="section-eyebrow">Elevator Pitch</div>
-      <h2 class="section-title">30 seconds.<br>Here's who I am.</h2>
-      <p class="pitch-sub">A short video introduction — who I am, what I'm working toward, and why PM.</p>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Ulj363FEOdU" title="Aeri Choi — Elevator Pitch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -645,7 +645,7 @@
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/aerichoi/" target="_blank">LinkedIn</a>
         <a href="mailto:03aeri@gmail.com">Email</a>
-        <a href="resume.pdf" download>Resume</a>
+        <a href="resume.pdf" download="Aeri Choi_resume.pdf">Resume</a>
       </div>
       <div class="footer-copy">© 2026 Aeri Choi. All rights reserved.</div>
     </div>
@@ -754,7 +754,7 @@
 
 <script>
   /* ── SCROLL SPY ── */
-  const sections = ['hero','about','job','experience','projects','gallery','pitch'];
+  const sections = ['hero','about','pitch','job','experience','projects','gallery'];
   const navLinks = document.querySelectorAll('.nav-link[data-target]');
 
   const observer = new IntersectionObserver((entries) => {
