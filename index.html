@@ -178,33 +178,6 @@
     .proj-arrow { margin-top: 10px; font-size: 16px; color: var(--gold); transition: transform 0.2s; text-align: right; }
     .project-card:hover .proj-arrow { transform: translateX(4px); }
 
-    /* ── GALLERY ── */
-    #gallery { background: var(--white); }
-    #gallery .section-inner { max-width: 1160px; }
-    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .gallery-item { border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; aspect-ratio: 4/3; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s; }
-    .gallery-item:hover img { transform: scale(1.04); }
-    .gallery-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,29,53,0.75) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
-    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
-    .gallery-item-label { font-size: 13px; font-weight: 500; color: white; }
-
-    /* Gallery detail panel */
-    .gallery-panel { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(12,29,53,0.92); z-index: 700; display: none; align-items: center; justify-content: center; padding: 40px; }
-    .gallery-panel.open { display: flex; }
-    .gallery-panel-inner { display: grid; grid-template-columns: 1fr 400px; max-width: 1100px; width: 100%; background: var(--white); border-radius: 20px; overflow: hidden; max-height: 85vh; }
-    .gallery-panel-img-side { overflow: hidden; }
-    .gallery-panel-img-side img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .gallery-panel-info { background: var(--navy); padding: 48px 40px; display: flex; flex-direction: column; overflow-y: auto; }
-    .gallery-panel-close { align-self: flex-end; background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; transition: all 0.2s; }
-    .gallery-panel-close:hover { background: rgba(255,255,255,0.2); color: white; }
-    .gallery-panel-tag { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .gallery-panel-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
-    .gallery-panel-date { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; }
-    .gallery-panel-desc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.8; font-weight: 300; flex: 1; }
-    .gallery-panel-link { margin-top: 28px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--gold); cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: gap 0.2s; }
-    .gallery-panel-link:hover { gap: 12px; }
-
     /* ── ELEVATOR PITCH ── */
     #pitch { background: var(--navy); }
     #pitch .section-eyebrow { color: rgba(196,164,107,0.8); }
@@ -231,17 +204,16 @@
     .mobile-drawer button { display: block; width: 100%; padding: 11px 16px; background: none; border: none; color: rgba(255,255,255,0.65); font-size: 14px; font-family: 'DM Sans', sans-serif; text-align: left; cursor: pointer; border-radius: 6px; }
     .mobile-drawer button.active { color: white; background: rgba(255,255,255,0.1); }
 
-    @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 900px) {
       .sidebar { display: none; } .main { margin-left: 0; } .mobile-topbar { display: flex; }
       #hero { grid-template-columns: 1fr; padding-top: 56px; } .hero-right { min-height: 55vw; order: -1; } .hero-left { padding: 40px 24px; } .hero-name { white-space: normal; font-size: clamp(44px, 10vw, 72px); }
       .section-inner { padding: 64px 24px; } .about-cards { grid-template-columns: 1fr; }
       .exp-grid { grid-template-columns: 1fr; } .projects-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; } .gallery-panel-inner { grid-template-columns: 1fr; max-height: 90vh; }
-      .gallery-panel-img-side { max-height: 40vh; } .modal-topbar, .modal-hero, .modal-body { padding-left: 24px; padding-right: 24px; }
+      .modal-topbar, .modal-hero, .modal-body { padding-left: 24px; padding-right: 24px; }
       footer { padding: 36px 24px; }
     }
-    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr; } .modal-photos { grid-template-columns: 1fr; } .hero-downloads { flex-direction: column; } }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } .modal-photos { grid-template-columns: 1fr; } .hero-downloads { flex-direction: column; } }
   </style>
 </head>
 <body>
@@ -259,7 +231,6 @@
       <button class="nav-link" data-target="job"><span class="nav-dot"></span>Objective</button>
       <button class="nav-link" data-target="experience"><span class="nav-dot"></span>Experience</button>
       <button class="nav-link" data-target="projects"><span class="nav-dot"></span>Projects</button>
-      <button class="nav-link" data-target="gallery"><span class="nav-dot"></span>Gallery</button>
     </nav>
   </div>
   <div class="sidebar-bottom">
@@ -292,7 +263,6 @@
   <button data-target="job" onclick="mobileNav('job')">Objective</button>
   <button data-target="experience" onclick="mobileNav('experience')">Experience</button>
   <button data-target="projects" onclick="mobileNav('projects')">Projects</button>
-  <button data-target="gallery" onclick="mobileNav('gallery')">Gallery</button>
 </div>
 
 <!-- ── MAIN ── -->
@@ -597,67 +567,6 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery">
-    <div class="section-inner">
-      <div class="section-eyebrow">Gallery</div>
-      <h2 class="section-title">Moments along<br>the way.</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item"
-          data-img="gallery1.png"
-          data-tag="Startup Competition · 2025"
-          data-title="Incheon Startup Competition"
-          data-date="Seoul · July – September 2025"
-          data-desc="Presented our HR service platform to media and industry professionals at the SURF 2025 Incheon event. I led the design process — 5 full UI iterations in Figma — and conducted direct outreach to 100 ICT companies. Our team earned the Idea Award."
-          data-exp="Incheon Startup Competition"
-          onclick="openGallery(this)">
-          <img src="gallery1.png" alt="Startup Competition">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Startup Competition · 2025</span></div>
-        </div>
-        <div class="gallery-item"
-          data-img="gallery2.png"
-          data-tag="Startup Competition · 2025"
-          data-title="Presenting to Judges"
-          data-date="Seoul · 2025"
-          data-desc="Engaging with potential partners and judges at the startup exhibition floor. I explained our HR platform concept and gathered real-time feedback from industry professionals — a key input for our final pitch."
-          data-exp="Incheon Startup Competition"
-          onclick="openGallery(this)">
-          <img src="gallery2.png" alt="Presenting">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Pitch Day · 2025</span></div>
-        </div>
-        <div class="gallery-item"
-          data-img="gallery3.png"
-          data-tag="SURF 2025 · Incheon"
-          data-title="SURF 2025 Awards Ceremony"
-          data-date="Incheon · September 2025"
-          data-desc="The 2025 SURF (Start-Up, Realize Future) Incheon competition awards ceremony. Our team was recognized at this event, which brought together startups and innovators from across the Incheon Global Campus ecosystem."
-          data-exp="Incheon Startup Competition"
-          onclick="openGallery(this)">
-          <img src="gallery3.png" alt="SURF 2025">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">SURF 2025 Incheon</span></div>
-        </div>
-        <div class="gallery-item"
-          data-img="profile.jpeg"
-          data-tag="Professional · 2026"
-          data-title="Aeri Choi"
-          data-date="2026"
-          data-desc="Aspiring Product Manager, junior at Stony Brook University studying Technology Systems Management. Passionate about building products that work across cultures and contexts."
-          data-exp=""
-          onclick="openGallery(this)">
-          <img src="profile.jpeg" alt="Aeri Choi">
-          <div class="gallery-item-overlay"><span class="gallery-item-label">Professional Photo</span></div>
-        </div>
-        <!-- Placeholder slots for more photos -->
-        <div class="gallery-item" style="background: var(--border); display:flex; align-items:center; justify-content:center; cursor:default;">
-          <span style="font-size:12px; color:var(--text-light); text-align:center; padding:16px;">📸 Add photos<br>to portfolio folder</span>
-        </div>
-        <div class="gallery-item" style="background: var(--border); display:flex; align-items:center; justify-content:center; cursor:default;">
-          <span style="font-size:12px; color:var(--text-light); text-align:center; padding:16px;">📸 Add photos<br>to portfolio folder</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -820,11 +729,6 @@
       <li><div class="ach-icon">⚡</div><div class="ach-text">Reduced proposal drafting turnaround time by <strong>50%</strong> by implementing AI-assisted workflows using Claude and Gemini</div></li>
       <li><div class="ach-icon">📄</div><div class="ach-text">Prepared structured research summaries and program documentation for internal reporting and project planning</div></li>
     </ul>
-    <div class="modal-section-title">Photos</div>
-    <div class="modal-photos">
-      <div class="modal-photo"><img src="gallery2.png" alt="DHP work"></div>
-      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
-    </div>
   </div>
 </div>
 
@@ -860,11 +764,6 @@
       <li><div class="ach-icon">📊</div><div class="ach-text">Conducted comparative research on <strong>city-level promotion strategies</strong>, delivering policy recommendations for foreign resident settlement and urban development</div></li>
       <li><div class="ach-icon">🏆</div><div class="ach-text">Proposal recognized as a <strong>best practice case</strong> by the city government — cited as a model for future outreach programs</div></li>
     </ul>
-    <div class="modal-section-title">Photos</div>
-    <div class="modal-photos">
-      <div class="modal-photo"><img src="gallery3.png" alt="SURF 2025 Incheon"></div>
-      <div class="modal-photo-placeholder"><p>📸 Add photos<br>to portfolio folder</p></div>
-    </div>
   </div>
 </div>
 
@@ -889,26 +788,9 @@
   </div>
 </div>
 
-<!-- ── GALLERY PANEL ── -->
-<div class="gallery-panel" id="gallery-panel" onclick="handleGalleryPanelClick(event)">
-  <div class="gallery-panel-inner">
-    <div class="gallery-panel-img-side">
-      <img id="gallery-panel-img" src="" alt="">
-    </div>
-    <div class="gallery-panel-info">
-      <button class="gallery-panel-close" onclick="closeGallery()">×</button>
-      <div class="gallery-panel-tag" id="gp-tag"></div>
-      <div class="gallery-panel-title" id="gp-title"></div>
-      <div class="gallery-panel-date" id="gp-date"></div>
-      <div class="gallery-panel-desc" id="gp-desc"></div>
-      <button class="gallery-panel-link" id="gp-link" onclick="goToExp()" style="display:none">View Full Experience →</button>
-    </div>
-  </div>
-</div>
-
 <script>
   /* ── SCROLL SPY ── */
-  const sections = ['hero','about','pitch','job','experience','projects','gallery'];
+  const sections = ['hero','about','pitch','job','experience','projects'];
   const navLinks = document.querySelectorAll('.nav-link[data-target]');
 
   const observer = new IntersectionObserver((entries) => {
@@ -948,41 +830,8 @@
   function openModal(id) { document.getElementById('modal-' + id).classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeModal(id) { document.getElementById('modal-' + id).classList.remove('open'); document.body.style.overflow = ''; }
 
-  /* ── GALLERY PANEL ── */
-  let currentGalleryExp = '';
-  const expMap = { 'Incheon Startup Competition': 'dhp' };
-
-  function openGallery(el) {
-    const img = el.dataset.img;
-    if (!img) return;
-    document.getElementById('gallery-panel-img').src = img;
-    document.getElementById('gp-tag').textContent = el.dataset.tag || '';
-    document.getElementById('gp-title').textContent = el.dataset.title || '';
-    document.getElementById('gp-date').textContent = el.dataset.date || '';
-    document.getElementById('gp-desc').textContent = el.dataset.desc || '';
-    currentGalleryExp = el.dataset.exp || '';
-    const linkBtn = document.getElementById('gp-link');
-    if (currentGalleryExp) { linkBtn.style.display = 'inline-flex'; }
-    else { linkBtn.style.display = 'none'; }
-    document.getElementById('gallery-panel').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeGallery() {
-    document.getElementById('gallery-panel').classList.remove('open');
-    document.getElementById('gallery-panel-img').src = '';
-    document.body.style.overflow = '';
-  }
-  function handleGalleryPanelClick(e) {
-    if (e.target === document.getElementById('gallery-panel')) closeGallery();
-  }
-  function goToExp() {
-    closeGallery();
-    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
-  }
-
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      closeGallery();
       ['dhp','dchoiglobal','incheon','suny'].forEach(closeModal);
       ['proj-lips','proj-startup','proj-db','proj-loreal','proj-recycling','proj-igc'].forEach(closeModal);
     }
