@@ -174,6 +174,9 @@
     .project-desc { font-size: 12.5px; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
     .project-stat { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 12px; color: var(--navy); font-weight: 500; }
     .project-card-placeholder { border-style: dashed; background: transparent; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 160px; }
+    .project-card[onclick] { cursor: pointer; }
+    .proj-arrow { margin-top: 14px; font-size: 16px; color: var(--gold); transition: transform 0.2s; text-align: right; }
+    .project-card:hover .proj-arrow { transform: translateX(4px); }
 
     /* ── GALLERY ── */
     #gallery { background: var(--white); }
@@ -530,46 +533,53 @@
       <div class="section-eyebrow">Projects & Highlights</div>
       <h2 class="section-title">Things I've built<br>and shipped.</h2>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('proj-lips')">
           <div class="project-num">01</div>
+          <div class="project-name">LIPS Program Checklist Tool</div>
+          <div class="project-org">Digital Healthcare Partners · 2026</div>
+          <div class="project-desc">Built an interactive web tool for managing government funding program documentation — used internally at DHP to track required documents for 2 programs across 2 applicant types.</div>
+          <div class="project-stat">🛠️ Live Tool · HTML/CSS/JS</div>
+          <div class="proj-arrow">→</div>
+        </div>
+        <div class="project-card" onclick="openModal('proj-startup')">
+          <div class="project-num">02</div>
           <div class="project-name">Incheon Startup Competition</div>
           <div class="project-org">Idea Award · Seoul, 2025</div>
           <div class="project-desc">Designed 5 UI iterations in Figma for an HR service platform, built the pitch deck, and conducted outreach to 100 ICT companies.</div>
           <div class="project-stat">🏆 Idea Award Recipient</div>
+          <div class="proj-arrow">→</div>
         </div>
-        <div class="project-card">
-          <div class="project-num">02</div>
+        <div class="project-card" onclick="openModal('proj-db')">
+          <div class="project-num">03</div>
           <div class="project-name">Business Simulation — CEO</div>
           <div class="project-org">DB Group Corporate Program · 2025</div>
           <div class="project-desc">Led a 3-day corporate management simulation as CEO — market research, competitor analysis, and strategic decision-making.</div>
           <div class="project-stat">📈 103.26% ROE growth</div>
+          <div class="proj-arrow">→</div>
         </div>
-        <div class="project-card">
-          <div class="project-num">03</div>
+        <div class="project-card" onclick="openModal('proj-loreal')">
+          <div class="project-num">04</div>
           <div class="project-name">L'Oréal Brandstorm</div>
           <div class="project-org">Preliminary Round · Seoul, 2025</div>
           <div class="project-desc">Researched product-market fit for men's skincare and designed a full app UI in Figma to support the concept.</div>
           <div class="project-stat">🎨 Full Figma UI Design</div>
+          <div class="proj-arrow">→</div>
         </div>
-        <div class="project-card">
-          <div class="project-num">04</div>
+        <div class="project-card" onclick="openModal('proj-recycling')">
+          <div class="project-num">05</div>
           <div class="project-name">Campus Recycling Initiative</div>
           <div class="project-org">SUNY Korea · THEME Club · 2024</div>
           <div class="project-desc">Coordinated a cross-university sustainability project spanning 3 universities at a shared campus library serving 5 institutions.</div>
           <div class="project-stat">🌱 3 universities coordinated</div>
+          <div class="proj-arrow">→</div>
         </div>
-        <div class="project-card">
-          <div class="project-num">05</div>
+        <div class="project-card" onclick="openModal('proj-igc')">
+          <div class="project-num">06</div>
           <div class="project-name">IGC Startup Bootcamp</div>
           <div class="project-org">Incheon Global Campus · 2024–25</div>
           <div class="project-desc">Led a startup team through business planning, competitor research, and an IR pitch to investors — end-to-end coordination.</div>
           <div class="project-stat">💼 Team Lead · IR Pitch</div>
-        </div>
-        <div class="project-card project-card-placeholder">
-          <div>
-            <div style="font-size:22px; color:var(--border); margin-bottom:8px;">+</div>
-            <div style="font-size:12px; color:var(--text-light); font-weight:300;">More coming soon</div>
-          </div>
+          <div class="proj-arrow">→</div>
         </div>
         <div class="project-card project-card-placeholder">
           <div>
@@ -661,6 +671,140 @@
     </div>
   </footer>
 </main>
+
+<!-- ── PROJECT MODALS ── -->
+
+<!-- LIPS Checklist -->
+<div class="exp-modal" id="modal-proj-lips">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-lips')">← Back to Projects</button><div class="modal-topbar-title">LIPS Program Checklist Tool</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">2026 · Digital Healthcare Partners</div><div class="modal-company">LIPS Program<br>Checklist Tool</div><div class="modal-role-text">Internal Web Tool · HTML / CSS / JavaScript</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">The Problem</div>
+    <p class="modal-desc">At DHP, managing the LIPS government funding program required tracking dozens of required documents across two programs (LIPS I & II) and two types of participants. The process was manual and error-prone — operators had to remember what to collect, from whom, and by when.</p>
+    <div class="modal-section-title">What I Built</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">🗂️</div><div class="ach-text">An <strong>interactive checklist tool</strong> that guides operators through every required document for LIPS I and LIPS II programs, with progress tracking and filtering by responsible party</div></li>
+      <li><div class="ach-icon">📅</div><div class="ach-text">A <strong>Timeline Planner</strong> — operators enter key dates and the tool auto-generates a customized deadline schedule</div></li>
+      <li><div class="ach-icon">🔍</div><div class="ach-text">A <strong>Document Checker</strong> — upload your files and get instant feedback on whether all required documents are present</div></li>
+      <li><div class="ach-icon">💻</div><div class="ach-text">Built entirely in <strong>HTML, CSS, and JavaScript</strong> — no frameworks, runs in any browser, no installation needed</div></li>
+    </ul>
+    <div class="modal-section-title">Live Tool</div>
+    <a href="lips-checklist/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:white; padding:12px 24px; border-radius:10px; font-size:13.5px; font-weight:600; text-decoration:none; margin-bottom:40px; transition:all 0.2s;">🔗 Open LIPS Checklist Tool →</a>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo-placeholder"><p>📸 Add screenshot<br>of the tool</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- Incheon Startup Competition -->
+<div class="exp-modal" id="modal-proj-startup">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-startup')">← Back to Projects</button><div class="modal-topbar-title">Incheon Startup Competition</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">July – September 2025 · Seoul</div><div class="modal-company">Incheon Startup Competition</div><div class="modal-role-text">Participant · Idea Award Recipient</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">Overview</div>
+    <p class="modal-desc">Participated in the SURF 2025 Incheon Startup Competition, where our team conceptualized and pitched an HR service platform targeting ICT companies in Incheon and Seoul. I led the product design and market research efforts.</p>
+    <div class="modal-section-title">What I Did</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">🎨</div><div class="ach-text">Designed <strong>5 iterations of the HR service platform UI</strong> in Figma — each version refined based on market feedback and team review</div></li>
+      <li><div class="ach-icon">📊</div><div class="ach-text">Translated market research into a <strong>pitch deck</strong> for investor and judge presentation</div></li>
+      <li><div class="ach-icon">📞</div><div class="ach-text">Conducted direct market outreach to <strong>100 ICT companies</strong> in Incheon and Seoul — call-to-call engagement to validate demand</div></li>
+      <li><div class="ach-icon">🏆</div><div class="ach-text">Earned the <strong>Idea Award</strong> at the SURF 2025 competition awards ceremony</div></li>
+    </ul>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo"><img src="gallery1.png" alt="Startup competition"></div>
+      <div class="modal-photo"><img src="gallery3.png" alt="SURF 2025 awards"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DB Group -->
+<div class="exp-modal" id="modal-proj-db">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-db')">← Back to Projects</button><div class="modal-topbar-title">Business Simulation — CEO</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">January 2025 · Online</div><div class="modal-company">DB Group Corporate<br>Management Simulation</div><div class="modal-role-text">Participant · CEO Role</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">Overview</div>
+    <p class="modal-desc">Selected to participate in the DB Group Corporate Management Experience Program — a competitive 3-day business simulation where participants lead a company through real market scenarios, financial decisions, and strategic planning.</p>
+    <div class="modal-section-title">What I Did</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">👔</div><div class="ach-text">Served in the <strong>CEO role</strong> — responsible for overall strategic direction, team coordination, and final decision-making</div></li>
+      <li><div class="ach-icon">📊</div><div class="ach-text">Led <strong>market research and competitor analysis</strong> to inform daily strategy pivots across the 3-day simulation</div></li>
+      <li><div class="ach-icon">📈</div><div class="ach-text">Achieved <strong>103.26% ROE growth</strong> — the result of consistent financial tracking and evidence-based decision-making</div></li>
+      <li><div class="ach-icon">📋</div><div class="ach-text">Organized daily strategy meetings and maintained accurate records of financial reports and market trends</div></li>
+    </ul>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- L'Oréal -->
+<div class="exp-modal" id="modal-proj-loreal">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-loreal')">← Back to Projects</button><div class="modal-topbar-title">L'Oréal Brandstorm</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">February – April 2025 · Seoul</div><div class="modal-company">L'Oréal Brandstorm</div><div class="modal-role-text">Participant · Preliminary Round</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">Overview</div>
+    <p class="modal-desc">L'Oréal Brandstorm is a global brand innovation competition where student teams pitch new product concepts to L'Oréal executives. Our team focused on the men's skincare category, designing a novel product and app concept from research through prototype.</p>
+    <div class="modal-section-title">What I Did</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">🔬</div><div class="ach-text">Researched <strong>product-market fit for men's skincare</strong> — analyzing ingredient trends, consumer behavior, and competitive landscape</div></li>
+      <li><div class="ach-icon">📱</div><div class="ach-text">Designed a <strong>full app UI in Figma</strong> to support the product concept — from wireframe to high-fidelity prototype</div></li>
+      <li><div class="ach-icon">🎤</div><div class="ach-text">Contributed to the <strong>pitch presentation</strong> delivered to L'Oréal judges in the preliminary round</div></li>
+    </ul>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- Campus Recycling -->
+<div class="exp-modal" id="modal-proj-recycling">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-recycling')">← Back to Projects</button><div class="modal-topbar-title">Campus Recycling Initiative</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">February – July 2024 · SUNY Korea</div><div class="modal-company">Campus Recycling Initiative</div><div class="modal-role-text">THEME Student Workshop Club · Secretary</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">Overview</div>
+    <p class="modal-desc">As Secretary of the THEME Student Workshop Club at SUNY Korea, I initiated and led a cross-university sustainability project to tackle waste management challenges at the Incheon Global Campus library — a shared facility serving 5 universities.</p>
+    <div class="modal-section-title">What I Did</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">🌱</div><div class="ach-text">Identified the waste management gap at the shared IGC library and <strong>proposed the initiative</strong> to the club and campus administration</div></li>
+      <li><div class="ach-icon">🤝</div><div class="ach-text">Organized and coordinated students from <strong>3 different universities</strong> — managing cross-institutional communication and scheduling</div></li>
+      <li><div class="ach-icon">📋</div><div class="ach-text">Led project meetings and execution timelines to optimize recycling efforts and improve operational efficiency</div></li>
+    </ul>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- IGC Startup -->
+<div class="exp-modal" id="modal-proj-igc">
+  <div class="modal-topbar"><button class="modal-back" onclick="closeModal('proj-igc')">← Back to Projects</button><div class="modal-topbar-title">IGC Startup Bootcamp</div></div>
+  <div class="modal-hero"><div class="modal-period-badge">November 2024 – April 2025 · Incheon</div><div class="modal-company">IGC Start-up Contest<br>Bootcamp</div><div class="modal-role-text">Team Lead · Participant</div></div>
+  <div class="modal-body">
+    <div class="modal-section-title">Overview</div>
+    <p class="modal-desc">The IGC Start-up Contest Bootcamp is a multi-month program where student teams develop business plans and pitch to investors. I led our team from initial concept through final IR deck presentation.</p>
+    <div class="modal-section-title">What I Did</div>
+    <ul class="modal-achievements">
+      <li><div class="ach-icon">👥</div><div class="ach-text"><strong>Led the startup project group</strong> — managing team coordination, task allocation, and meeting facilitation across the full bootcamp duration</div></li>
+      <li><div class="ach-icon">🔍</div><div class="ach-text">Conducted <strong>competitor analysis and technology research</strong> to validate the business concept and sharpen our positioning</div></li>
+      <li><div class="ach-icon">📊</div><div class="ach-text">Oversaw <strong>pitch deck development</strong> — from initial structure through final investor-facing IR presentation</div></li>
+      <li><div class="ach-icon">🎤</div><div class="ach-text">Delivered the <strong>IR pitch to investors</strong> at the final competition stage</div></li>
+    </ul>
+    <div class="modal-section-title">Photos</div>
+    <div class="modal-photos">
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+      <div class="modal-photo-placeholder"><p>📸 Add photos<br>here</p></div>
+    </div>
+  </div>
+</div>
 
 <!-- ── EXPERIENCE MODALS ── -->
 <div class="exp-modal" id="modal-dhp">
@@ -840,6 +984,7 @@
     if (e.key === 'Escape') {
       closeGallery();
       ['dhp','dchoiglobal','incheon','suny'].forEach(closeModal);
+      ['proj-lips','proj-startup','proj-db','proj-loreal','proj-recycling','proj-igc'].forEach(closeModal);
     }
   });
 </script>
