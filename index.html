@@ -84,9 +84,12 @@
 
     /* ── ABOUT ── */
     #about { background: var(--white); }
-    .about-bio { max-width: 600px; margin-bottom: 48px; }
+    .about-bio { max-width: 640px; margin-bottom: 48px; }
     .about-bio p { font-size: 15.5px; line-height: 1.85; color: var(--text-mid); font-weight: 300; margin-bottom: 18px; }
     .about-bio p strong { color: var(--navy); font-weight: 500; }
+    .about-skills-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 0; }
+    .about-skills-list li { font-size: 14px; color: var(--text-mid); font-weight: 300; line-height: 1.65; display: flex; gap: 12px; align-items: baseline; }
+    .skill-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); min-width: 90px; flex-shrink: 0; }
     .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .about-card { background: var(--cream); border-radius: 16px; padding: 28px; border: 1px solid var(--border); }
     .about-card-title { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 18px; }
@@ -297,7 +300,7 @@
     <div class="hero-left">
       <div class="hero-eyebrow">Portfolio · Class of 2027</div>
       <h1 class="hero-name">Aeri Choi</h1>
-      <p class="hero-desc">Studying Technology Systems Management at Stony Brook — building toward a career in Product Management through data, design, and getting things done.</p>
+      <p class="hero-desc">Studying Technology Systems Management at Stony Brook — I think in two languages, work in two cultures, and build with data.</p>
       <div class="hero-meta">
         <div class="hero-meta-item">Stony Brook University · TSM</div>
         <div class="hero-meta-item">GPA 3.97 / 4.0</div>
@@ -326,8 +329,15 @@
       <div class="section-eyebrow">About Me</div>
       <h2 class="section-title">Connecting data,<br>people, and products.</h2>
       <div class="about-bio">
-        <p>I'm drawn to Product Management because it sits at the intersection of <strong>empathy and evidence</strong> — understanding what people need, then building the case for why and how to build it. My background in Technology Systems Management gives me the analytical framework; my experience across startups, government programs, and marketing analytics gives me the context.</p>
-        <p>Growing up bilingual and working across Korean and US environments has shaped how I think about users: good products work across different mental models, not just demographics. I bring that cross-cultural lens into everything I do.</p>
+        <p>I'm passionate about building products and campaigns that resonate across cultures — not just convert on dashboards. Over the past few years, I've worked at the intersection of data analytics and cross-cultural communication: securing <strong>$160K+ in government funding</strong> with a 100% selection rate at Digital Healthcare Partners, growing Instagram traffic <strong>185% MoM</strong> through analytics-driven decisions at dChoi Global, and launching a bilingual YouTube channel for foreign residents as a Global Ambassador for Incheon Metropolitan City — earning the <strong>Mayor's Commendation Award</strong> in the process.</p>
+        <p style="margin-bottom:20px;">I've worked across:</p>
+        <ul class="about-skills-list">
+          <li><span class="skill-label">Analytics</span> Google Analytics, Excel, Google Sheets — tracking KPIs, building reports, identifying growth patterns</li>
+          <li><span class="skill-label">Design & Viz</span> Figma, Canva, Adobe Photoshop — creating data-driven visual content for campaigns</li>
+          <li><span class="skill-label">Tools & AI</span> Notion, Claude, Gemini, Microsoft Office</li>
+          <li><span class="skill-label">Languages</span> Korean (Native), English (Fluent)</li>
+        </ul>
+        <p style="margin-top:24px;">My focus is at the intersection of marketing analytics, storytelling, and cross-cultural insight — building things that don't just perform well on paper, but actually connect with the people they're made for.</p>
       </div>
       <div class="about-cards">
         <div class="about-card">
